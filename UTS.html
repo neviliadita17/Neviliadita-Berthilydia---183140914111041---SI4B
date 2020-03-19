@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .hemburger {
+            height: 100%;
+            float: left;
+        }
+
+        .container {
+            top: 0px;
+            left: 0px;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        .main {
+            width: auto;
+            height: 100%;
+            margin-left: 0%;
+            padding: 10px;
+            transition: 2s;
+        }
+
+        .main1 {
+            width: auto;
+            margin-left: 15%;
+            padding-left: 10px;
+            transition: 2s;
+        }
+
+        .content1 {
+            width: 53%;
+            height: 100%;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .contentside1 {
+            width: 15%;
+            height: 100%;
+            float: left;
+            margin-left: 10px;
+        }
+
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 0%;
+            height: 100%;
+            background-color: #44749d;
+            position: fixed;
+            transition: width 2s;
+            overflow: auto;
+        }
+
+        .sidebar1 {
+            width: 15%;
+            height: 100%;
+            background-color: #44749d;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            transition: width 2s;
+        }
+
+
+
+        /* MAIN CONTENT */
+        .content {
+            width: 68%;
+            height: 100%;
+            float: left;
+            margin-left: 10px;
+        }
+
+        h1 {
+            margin: 0px;
+        }
+
+        .span_close {
+            cursor: pointer;
+            float: right;
+            padding-right: 10px;
+            font-size: 30px;
+        }
+
+        .close {
+            height: 5%;
+            width: 100%;
+            background-color: #c6d4e1;
+        }
+
+        .gallery {
+            margin: 1%;
+            width: 23%;
+            height: 100px;
+            float: left;
+            background-color: #c6d4e1;
+        }
+
+        .gallery:hover {
+            background-color: #1976d2;
+        }
+
+        .content_mains {
+            margin: 1%;
+            width: 98%;
+            height: 320px;
+            float: left;
+            background-color: #c6d4e1;
+        }
+
+        .contentside {
+            width: 15%;
+            height: 100%;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .gallery_side {
+            margin: 4%;
+            width: 90%;
+            height: 290px;
+            float: left;
+            background-color: #ebe7e0;
+        }
+
+        .footer {
+            margin: 1%;
+            width: 98%;
+            height: 150px;
+            float: left;
+            background-color: #c6d4e1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar" id="mySidebar">
+            <div class="close">
+                <span class="span_close" onclick="closeNav()">&times;</span>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="hamburger">
+                <span id="openNav" style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776</span>
+            </div>
+            <div class="content" id="content">
+                <div class="gallery_main">
+                    <div class="gallery"></div>
+                    <div class="gallery"></div>
+                    <div class="gallery"></div>
+                    <div class="gallery"></div>
+                </div>
+                <div class="content_main">
+                    <div class="content_mains"></div>
+                </div>
+                <div class="footer">
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <div class="contentside" id="contentside">
+                <div class="gallery_main">
+                    <div class="gallery_side"></div>
+                    <div class="gallery_side"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function openNav() {
+        document.getElementById('mySidebar').className = "sidebar1";
+        document.getElementById('main').className = "main1";
+        document.getElementById('content').className = "content1";
+        document.getElementById('contentside').className = "contentside1";
+        // document.getElementById("openNav").style.display = 'none';
+    }
+
+    function closeNav() {
+        document.getElementById('mySidebar').className = "sidebar";
+        document.getElementById('main').className = "main";
+        document.getElementById('content').className = "content";
+        document.getElementById('contentside').className = "contentside";
+        // document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+
+</html>
